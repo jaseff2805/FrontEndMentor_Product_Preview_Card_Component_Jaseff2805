@@ -1,1 +1,55 @@
 
+/* Variables CSS */
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  --ff-body: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --ff-title: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--ff-body);
+}
+
+/* Helpers mínimos (equivalentes a tokens del style guide) */
+.bg-cream { background: var(--cream); }
+.text-grey { color: var(--grey) !important; }
+.text-black { color: var(--black) !important; }
+
+.ff-title { font-family: var(--ff-title); }
+.fs-title { font-size: 32px; }           /* coincide con el look del diseño */
+.letter-spacing { letter-spacing: 0.35em; font-size: 12px; }
+
+/* Card sizing */
+.card-product {
+  max-width: 600px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+/* Price */
+.price-current {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--green-500);
+}
+
+/* Button (pixel-perfect hover) */
+.btn-cart {
+  background: var(--green-500);
+  color: var(--white);
+  padding: 0.95rem 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+.btn-cart:hover,
+.btn-cart:focus-visible {
+  background: var(--green-700);
+  color: var(--white);
+}
